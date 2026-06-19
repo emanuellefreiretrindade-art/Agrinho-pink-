@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Mundo Sustentável & EcoQuiz ✨</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="quiz-container">
+        
+        <header class="quiz-header">
+            <h1>EcoMundo Pink ✨</h1>
+            <p class="subtitle">O seu portal brilhante de conhecimento e ecologia</p>
+        </header>
+
+        <section class="educational-content">
+            
+            <div class="info-card">
+                <h2>O que é Sustentabilidade? 🌱</h2>
+                <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80" alt="Natureza viva" class="content-img">
+                <p>Imagine que o planeta Terra é uma caixinha com recursos limitados. Ser sustentável significa usar a água, a energia, o solo e as florestas de um jeito inteligente hoje, para garantir que as próximas gerações também tenham um planeta saudável para viver. É o equilíbrio perfeito entre o progresso humano e o respeito à natureza.</p>
+            </div>
+
+            <div class="video-card">
+                <h3>Assista: O que é Sustentabilidade? 🎥</h3>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/8sUH_tEBfGw?si=dVknr0zIkAnycLne" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+              <p>O termo "sustentabilidade" tem ganhado bastante espaço nas últimas décadas, principalmente pelas notícias nada animadoras sobre o futuro do nosso mundinho né? 
+
+Mas, ao contrário do que muitas pessoas imaginam, a sustentabilidade não engloba apenas questões ambientais. Ela vai muito mais além disso, abrangendo aspectos sociais e econômicos para que a sociedade se desenvolva de forma sustentável, tentando causar o menor impacto possível ao meio ambiente.
+
+Assim sendo, nesse vídeo vamos falar sobre a origem do termo sustentabilidade, o que ela significa de fato, quais os pilares que ela possui (tripé da sustentabilidade), quais os tipos existem (falando brevemente da sustentabilidade ambiental, econômica, social e empresarial).
+
+Esperamos que esse vídeo te ajude a conhecer um pouco mais sobre a sustentabilidade e sua importância para a nossa sociedade! 😁
+</p>
+            </div>
+
+            <div class="info-card">
+                <h2>Por que devemos nos preocupar? 🌍</h2>
+                <img src="https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?auto=format&fit=crop&w=800&q=80" alt="Poluição ambiental" class="content-img">
+                <p>Tudo o que consumimos gera um impacto. Se continuarmos poluindo os rios com agrotóxicos, destruindo florestas e gerando lixo sem parar, enfrentaremos falta de água potável, alimentos perigosos para a saúde e mudanças climáticas extremas. Cuidar da sustentabilidade é, no fundo, cuidar da nossa própria sobrevivência.</p>
+            </div>
+
+            <div class="info-card">
+                <h2>Além dos 3 Rs: Conheça os 5 Rs ♻️</h2>
+                <p>Para reduzir nossa pegada no planeta, o estilo de vida sustentável propõe cinco passos essenciais:</p>
+                <ul class="content-list">
+                    <li><strong>Repensar:</strong> Será que eu realmente preciso comprar este produto?</li>
+                    <li><strong>Recusar:</strong> Diga não a sacolas plásticas e descartáveis desnecessários.</li>
+                    <li><strong>Reduzir:</strong> Consuma menos e escolha itens que durem mais.</li>
+                    <li><strong>Reutilizar:</strong> Dê uma nova função a objetos antes de jogá-los fora.</li>
+                    <li><strong>Reciclar:</strong> Separe o lixo para que vire matéria-prima novamente.</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h2>O que é a "Pegada Ecológica"? 👣</h2>
+                <img <img src="https://d3nehc6yl9qzo4.cloudfront.net/img/componentes_pegada_46126.jpg" jsaction="" class="sFlh5c FyHeAf iPVvYb" style="max-width: 304px; height: 299px; margin: 0px; width: 304px;" alt="Pegada ecológica: o que é e qual sua importância" jsname="kn3ccd">
+                <p>A Pegada Ecológica mede a quantidade de recursos da natureza que nós usamos para sustentar o nosso estilo de vida (água, solo, energia). Se todo mundo consumisse como uma pessoa média consome hoje, precisaríamos de muito mais do que apenas um planeta Terra para sobreviver.</p>
+            </div>
+
+            <div class="info-card">
+                <h2>O Perigo Silencioso dos Agrotóxicos ⚠️</h2>
+                <img src="https://images.unsplash.com/photo-1628352081506-83c43123ed6d?auto=format&fit=crop&w=800&q=80" alt="Plantação com defensivos" class="content-img">
+                <p>Os agrotóxicos são produtos químicos jogados nas plantações para matar pragas. O problema é que eles penetram na terra, destroem os nutrientes do solo, poluem as águas subterrâneas e contaminam os alimentos que chegam ao nosso prato, afetando a biodiversidade e a nossa saúde.</p>
+            </div>
+
+        </section>
+
+        <hr class="divider">
+
+        <section class="game-section">
+            <h2>Hora do Teste! 🌸</h2>
+            <p class="subtitle">Clique nos cards misteriosos para soltar glitter e revelar o desafio!</p>
+            
+            <div class="score-board">
+                Pontuação: <span id="score">0</span> / 3
+            </div>
+
+            <div class="game-grid">
+                <div class="question-card closed" onclick="revealQuestion(this, event)">
+                    <div class="mystery-cover">
+                        <span class="lock-icon">🔒</span>
+                        <div class="mystery-text">Mistério #1: O Impacto no Solo</div>
+                        <small>Clique para quebrar com glitter!</small>
+                    </div>
+                    <div class="question-content">
+                        <img src="https://images.unsplash.com/photo-1628352081506-83c43123ed6d?auto=format&fit=crop&w=600&q=80" alt="Solo" class="question-img">
+                        <div class="question-title">1. Qual é o principal impacto do uso excessivo de agrotóxicos diretamente no solo?</div>
+                        <div class="options-container">
+                            <button class="option-btn" onclick="checkAnswer(this, false, event)">Deixa a terra mais fértil e fofinha a longo prazo</button>
+                            <button class="option-btn" onclick="checkAnswer(this, true, event)">Mata os microrganismos benéficos e esgota os nutrientes</button>
+                            <button class="option-btn" onclick="checkAnswer(this, false, event)">Ajuda o solo a reter mais água da chuva naturalmente</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-card closed" onclick="revealQuestion(this, event)">
+                    <div class="mystery-cover">
+                        <span class="lock-icon">🔒</span>
+                        <div class="mystery-text">Mistério #2: A Saída Ecológica</div>
+                        <small>Clique para quebrar com glitter!</small>
+                    </div>
+                    <div class="question-content">
+                        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=600&q=80" alt="Joaninha" class="question-img">
+                        <div class="question-title">2. Qual é a alternativa mais sustentável para proteger a lavoura sem defensivos químicos?</div>
+                        <div class="options-container">
+                            <button class="option-btn" onclick="checkAnswer(this, true, event)">Controle biológico (usar predadores naturais como joaninhas)</button>
+                            <button class="option-btn" onclick="checkAnswer(this, false, event)">Utilizar fertilizantes sintéticos potentes em excesso</button>
+                            <button class="option-btn" onclick="checkAnswer(this, false, event)">Isolar toda a plantação com lonas plásticas pretas</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-card closed" onclick="revealQuestion(this, event)">
+                    <div class="mystery-cover">
+                        <span class="lock-icon">🔒</span>
+                        <div class="mystery-text">Mistério #3: O Caminho da Água</div>
+                        <small>Clique para quebrar com glitter!</small>
+                    </div>
+                    <div class="question-content">
+                        <img src="https://images.unsplash.com/photo-1548811579-017cf2a4268b?auto=format&fit=crop&w=600&q=80" alt="Água" class="question-img">
+                        <div class="question-title">3. Para onde vão os agrotóxicos carregados pela chuva que infiltram no solo?</div>
+                        <div class="options-container">
+                            <button class="option-btn" onclick="checkAnswer(this, false, event)">Eles evaporam totalmente e desaparecem no ar</button>
+                            <button class="option-btn" onclick="checkAnswer(this, false, event)">Transformam-se em oxigênio puro para os peixes</button>
+                            <button class="option-btn" onclick="checkAnswer(this, true, event)">Contaminam os lençóis freáticos e rios subterrâneos</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
