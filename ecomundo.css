@@ -1,0 +1,236 @@
+:root {
+    --rosa-escuro: #ff3377;
+    --rosa-medio: #ff6699;
+    --rosa-claro: #ffb3cc;
+    --rosa-fundo: #fff0f5;
+    --branco: #ffffff;
+    --verde-sucesso: #2ecc71;
+    --vermelho-erro: #e74c3c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background-color: var(--rosa-fundo);
+    background-image: radial-gradient(var(--rosa-claro) 1px, transparent 0);
+    background-size: 24px 24px;
+    color: #333;
+    min-height: 100vh;
+    padding: 30px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Container expandido para Tela Cheia (Widescreen) */
+.quiz-container {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 15px 35px rgba(255, 102, 153, 0.15);
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    border: 2px solid rgba(255, 179, 204, 0.5);
+    z-index: 10;
+}
+
+/* Cabeçalho */
+.quiz-header {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+h1 { 
+    color: var(--rosa-escuro); 
+    font-size: 2.8rem; 
+    margin-bottom: 10px; 
+}
+
+h2 { 
+    color: var(--rosa-escuro); 
+    font-size: 1.8rem; 
+    margin-bottom: 20px; 
+    text-align: center;
+}
+
+.subtitle { 
+    color: var(--rosa-medio); 
+    font-size: 1.1rem; 
+    font-weight: 500; 
+    margin-bottom: 25px; 
+    text-align: center;
+}
+
+/* Layout em colunas para a Seção de Conteúdo */
+.educational-content { 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px; 
+}
+
+.info-card, .video-card {
+    background: #fff9fb;
+    border: 1.5px solid var(--rosa-claro);
+    border-radius: 18px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info-card h2 { 
+    font-size: 1.3rem; 
+    color: var(--rosa-escuro); 
+    margin-bottom: 15px; 
+    text-align: left;
+}
+
+.info-card p { 
+    font-size: 1rem; 
+    line-height: 1.6; 
+    color: #555; 
+}
+
+/* Configuração das Imagens Informativas */
+.content-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    border: 1px solid var(--rosa-claro);
+}
+
+.content-list {
+    margin-top: 15px;
+    padding-left: 20px;
+    color: #555;
+    font-size: 1rem;
+}
+.content-list li { margin-bottom: 10px; line-height: 1.5; }
+
+/* Configuração dos Vídeos */
+.video-card h3 { font-size: 1.15rem; color: var(--rosa-escuro); margin-bottom: 15px; text-align: center; }
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Painel de Pontos */
+.score-board {
+    display: block; 
+    margin: 0 auto 30px auto; 
+    width: max-content;
+    background-color: var(--rosa-escuro); 
+    color: var(--branco);
+    padding: 10px 25px; 
+    border-radius: 50px; 
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 15px rgba(255, 51, 119, 0.2);
+}
+
+/* Layout em colunas para os Cards do Jogo */
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.question-card {
+    background-color: var(--branco); 
+    border: 2px solid var(--rosa-claro);
+    border-radius: 18px; 
+    overflow: hidden; 
+    position: relative; 
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo Suspense (Card Fechado) */
+.question-card.closed {
+    cursor: pointer; 
+    background: linear-gradient(135deg, #fff5f8 0%, #ffe6ee 100%);
+    border: 2px dashed var(--rosa-medio); 
+    padding: 50px 20px; 
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    min-height: 380px;
+}
+.question-card.closed:hover { transform: translateY(-5px); border-style: solid; box-shadow: 0 8px 20px rgba(255,51,119,0.25); }
+.lock-icon { font-size: 2.2rem; display: block; margin-bottom: 12px; }
+.mystery-text { font-weight: 700; color: var(--rosa-escuro); font-size: 1.2rem; }
+
+/* Conteúdo das Perguntas (Aberto) */
+.question-content { display: none; flex-grow: 1; }
+.question-img { width: 100%; height: 180px; object-fit: cover; border-bottom: 2px solid var(--rosa-claro); }
+.question-title { font-size: 1.1rem; font-weight: 700; padding: 20px; line-height: 1.5; }
+.options-container { padding: 0 20px 20px 20px; }
+
+/* Botões de Resposta */
+.option-btn {
+    display: block; 
+    width: 100%; 
+    background: #fff9fb; 
+    border: 1.5px solid var(--rosa-claro);
+    padding: 14px; 
+    margin: 10px 0; 
+    border-radius: 12px; 
+    cursor: pointer; 
+    text-align: left; 
+    transition: all 0.2s;
+    font-size: 0.95rem;
+}
+.option-btn:hover { background: var(--rosa-escuro); color: white; border-color: var(--rosa-escuro); transform: translateX(4px); }
+
+.correct { background-color: var(--verde-sucesso) !important; border-color: var(--verde-sucesso) !important; color: white !important; font-weight: bold;}
+.incorrect { background-color: var(--vermelho-erro) !important; border-color: var(--vermelho-erro) !important; color: white !important; }
+
+/* Linha Divisória */
+.divider { border: none; height: 2px; background: linear-gradient(to right, transparent, var(--rosa-claro), transparent); margin: 50px 0; }
+
+/* Layout em colunas para as Explicações Finais */
+.explanation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+.explanation-box { 
+    background: rgba(255, 240, 245, 0.6); 
+    border-left: 5px solid var(--rosa-escuro); 
+    padding: 20px; 
+    border-radius: 0 16px 16px 0; 
+    transition: all 0.3s ease;
+}
+.explanation-box:hover { background: rgba(255, 240, 245, 0.9); transform: translateY(-2px); }
+.explanation-box h3 { font-size: 1.15rem; margin-bottom: 8px; color: #222; }
+.explanation-box p { font-size: 0.95rem; color: #555; line-height: 1.5; }
+.explanation-box strong { color: var(--rosa-escuro); }
+
+/* Partículas de Glitter */
+.glitter-particle { position: absolute; pointer-events: none; border-radius: 50%; z-index: 9999; animation: flyOut 0.8s cubic-bezier(0.1, 0.8, 0.2, 1) forwards; }
+@keyframes flyOut {
+    0% { transform: translate(0, 0) rotate(0deg) scale(1.2); opacity: 1; }
+    100% { transform: translate(var(--mx), var(--my)) rotate(360deg) scale(0); opacity: 0; }
+}
